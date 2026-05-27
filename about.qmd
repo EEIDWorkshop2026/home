@@ -1,0 +1,16 @@
+---
+title: "About the EEID Workshop 2026"
+---
+
+The 2026 EEID associated workshop will be an **Introduction to Spatial Modeling**. 
+
+The workshop will be taught by
+
+- [Lauren Childs](https://math.vt.edu/people/faculty/childs-lauren.html)
+- [Kate Langwig](https://www.langwiglab.org/)
+- [Angela Peace](https://math.vt.edu/people/faculty/peace-angela.html)
+- [Michael Robert](https://math.vt.edu/people/faculty/robert-michael.html)
+- [Nick Ruktanonchai](https://vetmed.vt.edu/people/faculty/ruktanonchai-nick.html)
+- [Omar Saucedo](https://math.vt.edu/people/faculty/saucedo-omar.html)
+
+The EEID Workshop will involve collaborative sessions with the [Vectorbyte Training Workshop](https://vectorbyteorg.github.io/vectorbyte-training2026/).

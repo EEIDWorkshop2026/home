@@ -1,0 +1,43 @@
+---
+title: "Welcome to the 2026 EEID Workshop"
+format:
+  html:
+    toc: false
+    toc-location: right
+    html-math-method: katex
+    css: styles.css
+    grid:
+      margin-width: 1000px
+---
+
+::: columns
+::: {.column width="30%"}
+
+<center>
+
+
+[![](EEID2026-1600x514.png)](https://cpe.vt.edu/eeid2026.html)
+
+</center>
+
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="65%"}
+
+
+***Find out more about the workshop and its leaders on the [About](about.qmd) page.***
+
+***For topics and timings, check out our [Schedule](schedule2026.qmd) page.***
+
+
+***Information about pre-workshop preparation is available on the [Materials](materials.html#pre-work-and-set-up) page.***
+
+<br> <br> <br>
+
+:::
+
+:::

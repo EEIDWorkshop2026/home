@@ -1,0 +1,29 @@
+project:
+  type: website
+  output-dir: docs
+website:
+  title: "EEID 2026 Workshop"
+  navbar:
+    background:	"primary"
+    foreground: "light"
+    logo: "graphics/vblogoedit.png"
+    left:
+      - href: about.qmd
+        text: About
+      - href: schedule2026.qmd
+        text: Schedule
+      - href: materials.qmd
+        text: Materials
+    right:
+      - icon: github
+        href: https://github.com/EEIDWorkshop2026/home
+    search: TRUE
+        
+format:
+  html:
+    theme: united
+    css: styles.css
+    toc: true
+
+editor: source
+

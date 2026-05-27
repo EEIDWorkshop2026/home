@@ -1,0 +1,80 @@
+---
+title: "Schedule for the EEID 2026 Workshop"
+format:
+  html:
+    toc: true
+    toc-location: left
+    html-math-method: katex
+    css: styles.css
+---
+
+
+# Pre-workshop
+
+Information about pre-workshop preparation is available in the [Materials page](materials.html#pre-work-and-set-up).
+
+<br> <br>
+
+# 29 May 2026 (arrive)
+
+| Time | Activity | 
+|------|----------|
+|   At leisure   | Arrival  | 
+
+<br> <br> <br>
+
+# 30 May 2026 (08:30 - 17:00)
+
+| Time   | Activity | Materials |
+|--------|----------|-----------|
+| 8:30   | Overview and Introduction (*with Vectorbyte*) |   |
+| 9:00   | Intro to GitHub through R (*with Vectorbyte*) |   |
+| 10:30  | Break    |           |
+| 10:45  | Data Management in R (*with Vectorbyte*) | |
+| 12:00  | Lunch    |           |
+| 13:00  | Intro to Infectious Disease Modeling |  |
+| 15:00  | Break    |           |
+| 15:30  | Basics of Data Fitting |    |
+| 17:00  | Adjourn |    |
+
+
+<br> <br> <br>
+
+# 31 May 2026 (08:30 - 17:00)
+
+| Time   | Activity | Materials |
+|--------|----------|-----------|
+| 8:30   | Overview  of the day         |           |
+| 9:00   | Intro to Spatial Modeling | |
+| 10:30  | Break    |           |
+| 11:00  | Basic Spatial Modeling  |   |
+| 11:30  | Intro to Projects and Questions  |   |
+| 12:00  | Lunch    |           |
+| 13:00  | Tutorial on Projects and Begin Project Work |  |
+| 14:30  | Break    |           |
+| 15:00  | Project Time   |   |
+| 17:00  | Adjourn |    |
+<br>
+<br>
+<br>
+
+# 1 June 2026 (08:30 - 11:45)
+
+| Time.  | Activity                       | Materials |
+|--------|--------------------------------|-----------|
+| 8:30   | Overview  of the day         |           |
+| 9:00   | Project Time  | |
+| 10:30  | Break                 |           |
+| 11:00  | Present Projects (*with Vectorbyte*) |           |
+| 12:00  | Lunch     |           |
+
+
+<br>
+<br>
+<br>
+
+# Post-workshop
+
+Enjoy using these new techniques!
+
+<br> <br> <br>

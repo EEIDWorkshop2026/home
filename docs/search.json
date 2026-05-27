@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to the 2026 EEID Workshop",
+    "section": "",
+    "text": "Find out more about the workshop and its leaders on the About page.\nFor topics and timings, check out our Schedule page.\nInformation about pre-workshop preparation is available on the Materials page."
+  },
+  {
+    "objectID": "materials.html",
+    "href": "materials.html",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "",
+    "text": "We will be using R for all data manipulation and analyses/model fitting. Any operating system (Windows, Mac, Linux) will do, as long as you have R (version 3.6 or higher) installed.\nWe will be using RStudio to run R.\nWe will host all materials on GitHub. All students need a GitHub account as that is how we will share materials.\n\n\n\n\nFor this workshop, we assume basic familiarity with:\n\nBasic R Programming Language\nBasic calculus including functions\nBasic probability and statistics\n\nReview of R\n\nA great short refresher on R is the Biological Computing in R Chapter in The Multilingual Quantitative Biologist.\nSome resources for brushing up on R:\n\n\nThe Multilingual Quantitative Biologist\nCode Academy\nData quest\n\nReview of Calculus\n\nThere are many on-line tutorials. One resources with some good videos is 3blue1brown.\nA concise cheatsheet summary can be found under `A Complete Calculus Cheatsheet’ at Paul’s Online Notes\n\nReview of Probability and Statistics\nThere are many on-line tutorials. One resources with some good videos is 3blue1brown."
+  },
+  {
+    "objectID": "materials.html#software",
+    "href": "materials.html#software",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "",
+    "text": "We will be using R for all data manipulation and analyses/model fitting. Any operating system (Windows, Mac, Linux) will do, as long as you have R (version 3.6 or higher) installed.\nWe will be using RStudio to run R.\nWe will host all materials on GitHub. All students need a GitHub account as that is how we will share materials."
+  },
+  {
+    "objectID": "materials.html#pre-requisites",
+    "href": "materials.html#pre-requisites",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "",
+    "text": "For this workshop, we assume basic familiarity with:\n\nBasic R Programming Language\nBasic calculus including functions\nBasic probability and statistics\n\nReview of R\n\nA great short refresher on R is the Biological Computing in R Chapter in The Multilingual Quantitative Biologist.\nSome resources for brushing up on R:\n\n\nThe Multilingual Quantitative Biologist\nCode Academy\nData quest\n\nReview of Calculus\n\nThere are many on-line tutorials. One resources with some good videos is 3blue1brown.\nA concise cheatsheet summary can be found under `A Complete Calculus Cheatsheet’ at Paul’s Online Notes\n\nReview of Probability and Statistics\nThere are many on-line tutorials. One resources with some good videos is 3blue1brown."
+  },
+  {
+    "objectID": "materials.html#introduction-to-the-workshop",
+    "href": "materials.html#introduction-to-the-workshop",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Introduction to the Workshop",
+    "text": "Introduction to the Workshop\n\nLecture Slides"
+  },
+  {
+    "objectID": "materials.html#introduction-to-github-through-r",
+    "href": "materials.html#introduction-to-github-through-r",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Introduction to GitHub through R",
+    "text": "Introduction to GitHub through R\n\nLecture Slides"
+  },
+  {
+    "objectID": "materials.html#introduction-infectious-disease-modeling",
+    "href": "materials.html#introduction-infectious-disease-modeling",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Introduction Infectious Disease Modeling",
+    "text": "Introduction Infectious Disease Modeling\n\nLecture Slides"
+  },
+  {
+    "objectID": "materials.html#basic-data-fitting",
+    "href": "materials.html#basic-data-fitting",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Basic Data Fitting",
+    "text": "Basic Data Fitting\n\nLecture Slides"
+  },
+  {
+    "objectID": "materials.html#introduction-to-spatial-modeling",
+    "href": "materials.html#introduction-to-spatial-modeling",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Introduction to Spatial Modeling",
+    "text": "Introduction to Spatial Modeling\n\nLecture Slides"
+  },
+  {
+    "objectID": "schedule2026.html",
+    "href": "schedule2026.html",
+    "title": "Schedule for the EEID 2026 Workshop",
+    "section": "",
+    "text": "Pre-workshop\nInformation about pre-workshop preparation is available in the Materials page.\n \n\n\n29 May 2026 (arrive)\n\n\n\nTime\nActivity\n\n\n\n\nAt leisure\nArrival\n\n\n\n  \n\n\n30 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview and Introduction (with Vectorbyte)\n\n\n\n9:00\nIntro to GitHub through R (with Vectorbyte)\n\n\n\n10:30\nBreak\n\n\n\n10:45\nData Management in R (with Vectorbyte)\n\n\n\n12:00\nLunch\n\n\n\n13:00\nIntro to Infectious Disease Modeling\n\n\n\n15:00\nBreak\n\n\n\n15:30\nBasics of Data Fitting\n\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n31 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nIntro to Spatial Modeling\n\n\n\n10:30\nBreak\n\n\n\n11:00\nBasic Spatial Modeling\n\n\n\n11:30\nIntro to Projects and Questions\n\n\n\n12:00\nLunch\n\n\n\n13:00\nTutorial on Projects and Begin Project Work\n\n\n\n14:30\nBreak\n\n\n\n15:00\nProject Time\n\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n1 June 2026 (08:30 - 11:45)\n\n\n\nTime.\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nProject Time\n\n\n\n10:30\nBreak\n\n\n\n11:00\nPresent Projects (with Vectorbyte)\n\n\n\n12:00\nLunch\n\n\n\n\n  \n\n\nPost-workshop\nEnjoy using these new techniques!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About the EEID Workshop 2026",
+    "section": "",
+    "text": "The 2026 EEID associated workshop will be an Introduction to Spatial Modeling.\nThe workshop will be taught by\n\nLauren Childs\nKate Langwig\nAngela Peace\nMichael Robert\nNick Ruktanonchai\nOmar Saucedo\n\nThe EEID Workshop will involve collaborative sessions with the Vectorbyte Training Workshop."
+  }
+]
