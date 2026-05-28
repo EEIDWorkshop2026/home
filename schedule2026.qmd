@@ -27,10 +27,10 @@ Information about pre-workshop preparation is available in the [Materials page](
 
 | Time   | Activity | Materials |
 |--------|----------|-----------|
-| 8:30   | Overview and Introduction (*with Vectorbyte*) |   |
-| 9:00   | Intro to GitHub through R (*with Vectorbyte*) |   |
+| 8:30   | Overview and Introduction (*with [Vectorbyte](https://vectorbyteorg.github.io/vectorbyte-training2026/schedule2026.html)*) |   |
+| 9:00   | Intro to GitHub through R (*with [Vectorbyte](https://vectorbyteorg.github.io/vectorbyte-training2026/schedule2026.html)*) |   |
 | 10:30  | Break    |           |
-| 10:45  | Data Management in R (*with Vectorbyte*) | |
+| 10:45  | Data Management in R (*with [Vectorbyte](https://vectorbyteorg.github.io/vectorbyte-training2026/schedule2026.html)*) | |
 | 12:00  | Lunch    |           |
 | 13:00  | Intro to Infectious Disease Modeling |  |
 | 15:00  | Break    |           |
@@ -58,15 +58,15 @@ Information about pre-workshop preparation is available in the [Materials page](
 <br>
 <br>
 
-# 1 June 2026 (08:30 - 11:45)
+# 1 June 2026 (08:30 - 12:00)
 
 | Time.  | Activity                       | Materials |
 |--------|--------------------------------|-----------|
-| 8:30   | Overview  of the day         |           |
+| 8:30   | Overview  of the day         | |
 | 9:00   | Project Time  | |
-| 10:30  | Break                 |           |
-| 11:00  | Present Projects (*with Vectorbyte*) |           |
-| 12:00  | Lunch     |           |
+| 10:30  | Break                 | |
+| 11:00  | Present Projects (*with [Vectorbyte](https://vectorbyteorg.github.io/vectorbyte-training2026/schedule2026.html)*) | |
+| 12:00  | Lunch     | |
 
 
 <br>

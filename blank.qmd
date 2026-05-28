@@ -1,7 +1,7 @@
 ---
 title: "EEID Workshop 2026"
 subtitle: "More coming soon"
-# author: "Leah R. Johnson and Kate Langwig, Virginia Tech"
+# author: "EEID Instructors, Virginia Tech"
 title-slide-attributes:
   data-background-size: contain
   data-background-opacity: "0.2"
