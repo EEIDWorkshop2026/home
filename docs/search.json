@@ -67,7 +67,7 @@
     "href": "schedule2026.html",
     "title": "Schedule for the EEID 2026 Workshop",
     "section": "",
-    "text": "Pre-workshop\nInformation about pre-workshop preparation is available in the Materials page.\n \n\n\n29 May 2026 (arrive)\n\n\n\nTime\nActivity\n\n\n\n\nAt leisure\nArrival\n\n\n\n  \n\n\n30 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview and Introduction (with Vectorbyte)\n\n\n\n9:00\nIntro to GitHub through R (with Vectorbyte)\nSlides\n\n\n10:30\nBreak\n\n\n\n10:45\nData Management in R (with Vectorbyte)\nSlides\n\n\n12:00\nLunch\n\n\n\n13:00\nIntro to Infectious Disease Modeling\nSlides\n\n\n15:00\nBreak\n\n\n\n15:30\nBasics of Data Fitting\nSlides\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n31 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nIntro to Spatial Modeling\n\n\n\n10:30\nBreak\n\n\n\n11:00\nBasic Spatial Modeling\n\n\n\n11:30\nIntro to Projects and Questions\n\n\n\n12:00\nLunch\n\n\n\n13:00\nTutorial on Projects and Begin Project Work\n\n\n\n14:30\nBreak\n\n\n\n15:00\nProject Time\n\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n1 June 2026 (08:30 - 12:00)\n\n\n\nTime.\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nProject Time\n\n\n\n10:30\nBreak\n\n\n\n11:00\nPresent Projects (with Vectorbyte)\n\n\n\n12:00\nLunch\n\n\n\n\n  \n\n\nPost-workshop\nEnjoy using these new techniques!"
+    "text": "Pre-workshop\nInformation about pre-workshop preparation is available in the Materials page.\n \n\n\n29 May 2026 (arrive)\n\n\n\nTime\nActivity\n\n\n\n\nAt leisure\nArrival\n\n\n\n  \n\n\n30 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview and Introduction (with Vectorbyte)\nSlides\n\n\n9:00\nIntro to GitHub through R (with Vectorbyte)\nSlides\n\n\n10:30\nBreak\n\n\n\n10:45\nData Management in R (with Vectorbyte)\nSlides\n\n\n12:00\nLunch\n\n\n\n13:00\nIntro to Infectious Disease Modeling\nSlides\n\n\n15:00\nBreak\n\n\n\n15:30\nBasics of Data Fitting\nSlides\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n31 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nIntro to Spatial Modeling\n\n\n\n10:30\nBreak\n\n\n\n11:00\nBasic Spatial Modeling\n\n\n\n11:30\nIntro to Projects and Questions\n\n\n\n12:00\nLunch\n\n\n\n13:00\nTutorial on Projects and Begin Project Work\n\n\n\n14:30\nBreak\n\n\n\n15:00\nProject Time\n\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n1 June 2026 (08:30 - 12:00)\n\n\n\nTime.\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nProject Time\n\n\n\n10:30\nBreak\n\n\n\n11:00\nPresent Projects (with Vectorbyte)\n\n\n\n12:00\nLunch\n\n\n\n\n  \n\n\nPost-workshop\nEnjoy using these new techniques!"
   },
   {
     "objectID": "about.html",
@@ -1124,7 +1124,7 @@
     "href": "materials.html#day-1",
     "title": "Materials for the EEID Workshop 2026",
     "section": "Day 1",
-    "text": "Day 1\n\nIntroduction to the Workshop\n\nLecture Slides\n\n\n\nIntroduction to GitHub through R\n\nSlides\n\n\n\nIntroduction to Data Management through R\n\nSlides\n\n\n\nIntroduction Infectious Disease Modeling\n\nSlides\n\n\n\nBasic Data Fitting\n\nSlides"
+    "text": "Day 1\n\nIntroduction to the Workshop\n\nSlides\n\n\n\nIntroduction to GitHub through R\n\nSlides\n\n\n\nIntroduction to Data Management through R\n\nSlides\n\n\n\nIntroduction Infectious Disease Modeling\n\nSlides\n\n\n\nBasic Data Fitting\n\nSlides"
   },
   {
     "objectID": "materials.html#day-2",
@@ -1132,5 +1132,68 @@
     "title": "Materials for the EEID Workshop 2026",
     "section": "Day 2",
     "text": "Day 2\n\nIntroduction to Spatial Modeling\n\nLecture Slides"
+  },
+  {
+    "objectID": "VB_Welcome.html#welcome",
+    "href": "VB_Welcome.html#welcome",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "Welcome!",
+    "text": "Welcome!\nThis is a joint training workshop hosted by the Vector Byte Initiative and the Ecology and Evolution of Infectious Diseases Conference."
+  },
+  {
+    "objectID": "VB_Welcome.html#history-eeid",
+    "href": "VB_Welcome.html#history-eeid",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "History – EEID",
+    "text": "History – EEID\n\nFirst meeting in 2003 (Penn State)\nHas occurred annually after that\nA subset of these meetings has included training workshops (mostly late 2000s) but they have been brought back for the last 3 meetings (Stanford, Notre Dame, VT)"
+  },
+  {
+    "objectID": "VB_Welcome.html#history-vectorbyte",
+    "href": "VB_Welcome.html#history-vectorbyte",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "History – VectorByte",
+    "text": "History – VectorByte\n\nBegan as the NIH/BBSRC supported Vector Behavior in Transmission Ecology Research Coordination Network (VectorBiTE RCN) in 2015\nInitially consisted of networking meetings, training, and initial development of databases\nVectorByte Initiative is the NSF funded project that grew out of this, focusing on development of publicly available databases and training workshops"
+  },
+  {
+    "objectID": "VB_Welcome.html#eeid-and-vectorbyte-training",
+    "href": "VB_Welcome.html#eeid-and-vectorbyte-training",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "EEID and VectorByte Training",
+    "text": "EEID and VectorByte Training\n\nThis is the second year that the EEID and VectorByte trainings have been co-located, and VectorByte provided some of the training for EEID 3 years ago.\n\nThis year, we’ve integrated them further to allow more opportunities for networking, and to leverage our extended expertise at Virginia Tech."
+  },
+  {
+    "objectID": "VB_Welcome.html#schedule",
+    "href": "VB_Welcome.html#schedule",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "Schedule",
+    "text": "Schedule\n\n\nSaturday/Sunday (8:30am - 5:30pm):\n\nSession 1 (joint on Sat.)\nBREAK (joint)\nSession 2 (joint on Sat.)\nLUNCH (joint)\nSession 3 (divided)\nBREAK (joint)\nSession 4 (divided)\n\n\n\n\nMonday (8:30am - 1:00pm):\n\nSession 1 (divided)\nBREAK (joint)\nSession 2 – Presentations (joint)\nLUNCH (joint)\n\nMore detailed schedules are on the respective training websites."
+  },
+  {
+    "objectID": "VB_Welcome.html#logistics",
+    "href": "VB_Welcome.html#logistics",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "Logistics",
+    "text": "Logistics\n\nAll joint sessions will occur in the large meeting room\nbreaks and lunch will be held in the lobby areas on the first floor of Steger\nVectorByte sessions: Steger 118\nEEID sessions: Steger 325"
+  },
+  {
+    "objectID": "VB_Welcome.html#meet-the-teams",
+    "href": "VB_Welcome.html#meet-the-teams",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "Meet the Teams",
+    "text": "Meet the Teams"
+  },
+  {
+    "objectID": "VB_Welcome.html#vectorbyte-showcase",
+    "href": "VB_Welcome.html#vectorbyte-showcase",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "VectorByte Showcase",
+    "text": "VectorByte Showcase\nInterested in learning more about data resources for VBD systems, giving your input about the future of data sharing for VBDs, or more networking?\nSign up for the VectorByte Showcase:\n\n\n\n1:30 - 4:00pm\nSteger Auditorium (where we are now) and Lobby\nFood and networking"
+  },
+  {
+    "objectID": "VB_Welcome.html#questions",
+    "href": "VB_Welcome.html#questions",
+    "title": "VectorByte and EEID Methods Training",
+    "section": "Questions?",
+    "text": "Questions?"
   }
 ]

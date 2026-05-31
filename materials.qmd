@@ -55,7 +55,7 @@ There are many on-line tutorials. One resources with some good videos is
 ## Day 1
 ### Introduction to the Workshop
 
--   [Lecture Slides](blank.qmd)
+-   [Slides](VB_Welcome.qmd)
 
 ### Introduction to GitHub through R
 
