@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kate Langwig">
+<meta name="dcterms.date" content="2026-05-26">
+
+<title>GitHub – EEID 2026 Workshop</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-bbcc9e9e8082ad16fffdd95326fbd2e6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./graphics/vblogoedit.png" alt="" class="navbar-logo light-content">
+    <img src="./graphics/vblogoedit.png" alt="" class="navbar-logo dark-content">
+    </a>
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">EEID 2026 Workshop</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./schedule2026.html"> 
+<span class="menu-text">Schedule</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./materials.html"> 
+<span class="menu-text">Materials</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/EEIDWorkshop2026/home"> <i class="bi bi-github" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#welcome-to-the-eeid-2026-workshop" id="toc-welcome-to-the-eeid-2026-workshop" class="nav-link active" data-scroll-target="#welcome-to-the-eeid-2026-workshop">Welcome to the EEID 2026 workshop</a></li>
+  <li><a href="#pre-break-goals" id="toc-pre-break-goals" class="nav-link" data-scroll-target="#pre-break-goals">Pre-Break Goals</a></li>
+  <li><a href="#the-replication-crisis" id="toc-the-replication-crisis" class="nav-link" data-scroll-target="#the-replication-crisis">The Replication Crisis</a></li>
+  <li><a href="#what-does-it-mean-for-research-to-be-reproducible" id="toc-what-does-it-mean-for-research-to-be-reproducible" class="nav-link" data-scroll-target="#what-does-it-mean-for-research-to-be-reproducible">What does it mean for research to be “Reproducible”?</a></li>
+  <li><a href="#who-benefits-from-reproducible-research" id="toc-who-benefits-from-reproducible-research" class="nav-link" data-scroll-target="#who-benefits-from-reproducible-research">Who benefits from reproducible research?</a></li>
+  <li><a href="#working-in-github" id="toc-working-in-github" class="nav-link" data-scroll-target="#working-in-github">Working in Github</a></li>
+  <li><a href="#terminology" id="toc-terminology" class="nav-link" data-scroll-target="#terminology">Terminology</a></li>
+  <li><a href="#terminology-1" id="toc-terminology-1" class="nav-link" data-scroll-target="#terminology-1">Terminology</a></li>
+  <li><a href="#terminology-cont." id="toc-terminology-cont." class="nav-link" data-scroll-target="#terminology-cont.">Terminology cont.</a></li>
+  <li><a href="#github-workflow" id="toc-github-workflow" class="nav-link" data-scroll-target="#github-workflow">GitHub workflow</a></li>
+  <li><a href="#class-pledge" id="toc-class-pledge" class="nav-link" data-scroll-target="#class-pledge">Class pledge</a></li>
+  <li><a href="#sending-your-files-to-our-workshop-repository" id="toc-sending-your-files-to-our-workshop-repository" class="nav-link" data-scroll-target="#sending-your-files-to-our-workshop-repository">Sending your files to our workshop repository</a></li>
+  <li><a href="#fair-data-practices" id="toc-fair-data-practices" class="nav-link" data-scroll-target="#fair-data-practices">FAIR Data Practices</a></li>
+  <li><a href="#pre-course-homework" id="toc-pre-course-homework" class="nav-link" data-scroll-target="#pre-course-homework">Pre-course homework</a>
+  <ul class="collapse">
+  <li><a href="#register-for-a-github-username" id="toc-register-for-a-github-username" class="nav-link" data-scroll-target="#register-for-a-github-username">Register for a GitHub username</a></li>
+  <li><a href="#installing-git" id="toc-installing-git" class="nav-link" data-scroll-target="#installing-git">Installing Git</a></li>
+  <li><a href="#install-a-git-client" id="toc-install-a-git-client" class="nav-link" data-scroll-target="#install-a-git-client">Install a Git client</a></li>
+  <li><a href="#enter-your-user-name-into-this-form" id="toc-enter-your-user-name-into-this-form" class="nav-link" data-scroll-target="#enter-your-user-name-into-this-form">Enter your user name into this form</a></li>
+  <li><a href="#tasks-for-today" id="toc-tasks-for-today" class="nav-link" data-scroll-target="#tasks-for-today">Tasks for today</a></li>
+  <li><a href="#configure-git-on-your-computer" id="toc-configure-git-on-your-computer" class="nav-link" data-scroll-target="#configure-git-on-your-computer">1. Configure Git on your computer</a></li>
+  <li><a href="#create-a-personal-access-token" id="toc-create-a-personal-access-token" class="nav-link" data-scroll-target="#create-a-personal-access-token">2. Create a personal access token</a></li>
+  <li><a href="#set-up-a-repository-on-github" id="toc-set-up-a-repository-on-github" class="nav-link" data-scroll-target="#set-up-a-repository-on-github">3. Set up a repository on GitHub</a></li>
+  <li><a href="#clone-that-repository-to-your-computer" id="toc-clone-that-repository-to-your-computer" class="nav-link" data-scroll-target="#clone-that-repository-to-your-computer">4. Clone that repository to your computer</a></li>
+  <li><a href="#cont.-exploring-your-repository" id="toc-cont.-exploring-your-repository" class="nav-link" data-scroll-target="#cont.-exploring-your-repository">4 cont. Exploring your Repository</a></li>
+  <li><a href="#edit-something-in-your-repository" id="toc-edit-something-in-your-repository" class="nav-link" data-scroll-target="#edit-something-in-your-repository">5. Edit something in your repository</a></li>
+  <li><a href="#commit-push-your-edits-using-git" id="toc-commit-push-your-edits-using-git" class="nav-link" data-scroll-target="#commit-push-your-edits-using-git">6. Commit &amp; Push your edits using Git</a></li>
+  <li><a href="#confirm-that-push-worked" id="toc-confirm-that-push-worked" class="nav-link" data-scroll-target="#confirm-that-push-worked">7. Confirm that Push worked</a></li>
+  <li><a href="#adding-collaborators" id="toc-adding-collaborators" class="nav-link" data-scroll-target="#adding-collaborators">8. Adding collaborators</a></li>
+  <li><a href="#collaborating-using-github" id="toc-collaborating-using-github" class="nav-link" data-scroll-target="#collaborating-using-github">Collaborating using GitHub</a></li>
+  <li><a href="#going-further" id="toc-going-further" class="nav-link" data-scroll-target="#going-further">Going further</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">GitHub</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kate Langwig </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">May 26, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="welcome-to-the-eeid-2026-workshop" class="level2">
+<h2 class="anchored" data-anchor-id="welcome-to-the-eeid-2026-workshop">Welcome to the EEID 2026 workshop</h2>
+<ul>
+<li>Click <a href="https://github.com/EEIDWorkshop2026/materials">here</a> and scroll down to follow along with course materials</li>
+</ul>
+</section>
+<section id="pre-break-goals" class="level2">
+<h2 class="anchored" data-anchor-id="pre-break-goals">Pre-Break Goals</h2>
+<ul>
+<li>Introduce Git &amp; GitHub</li>
+<li>learn to link GitHub to RStudio</li>
+<li>edit your first script and send it to GitHub</li>
+</ul>
+</section>
+<section id="the-replication-crisis" class="level2">
+<h2 class="anchored" data-anchor-id="the-replication-crisis">The Replication Crisis</h2>
+<p>Very few scientific studies are ever actually replicated, and when we try to replicate the results of studies we often can’t.</p>
+<p>Why don’t we replicate more studies?</p>
+</section>
+<section id="what-does-it-mean-for-research-to-be-reproducible" class="level2">
+<h2 class="anchored" data-anchor-id="what-does-it-mean-for-research-to-be-reproducible">What does it mean for research to be “Reproducible”?</h2>
+<p>Research is <strong>reproducible</strong> when others can reproduce the results of a scientific study given only the original data, code, and documentation</p>
+</section>
+<section id="who-benefits-from-reproducible-research" class="level2">
+<h2 class="anchored" data-anchor-id="who-benefits-from-reproducible-research">Who benefits from reproducible research?</h2>
+<ul>
+<li>Researchers
+<ul>
+<li>Remember how and why you did what you did</li>
+<li>Quickly simplify and modify analyses</li>
+<li>Makes you trustworthy</li>
+<li>Increases citation rates</li>
+</ul></li>
+<li>Research community
+<ul>
+<li>Lets people learn from your work</li>
+<li>Lets people find your mistakes</li>
+<li><em>Lets people actually reproduce your results</em></li>
+</ul></li>
+</ul>
+</section>
+<section id="working-in-github" class="level2">
+<h2 class="anchored" data-anchor-id="working-in-github">Working in Github</h2>
+<ul>
+<li>Git is version control system, with the original purpose of allowing groups to work collaboratively on software projects</li>
+<li>Git manages the evolution of a set of files - called a repository</li>
+<li>A repository is essentially a folder where you store your stuff</li>
+<li>Version control works a bit like “Track Changes” in word, Git will track the changes we make to our code so we can return to previous versions</li>
+<li>It also allows collaboration so I can look at your code and make changes - a bit like a more complicated version of Google Docs</li>
+</ul>
+</section>
+<section id="terminology" class="level2">
+<h2 class="anchored" data-anchor-id="terminology">Terminology</h2>
+<ul>
+<li><strong>repository</strong>: like a project folder</li>
+<li>All data, code, and outputs relevant to a particular project live together in the same repository (“repo”)</li>
+<li>It is usually a local folder on your computer. You can keep code files, text files, image files, you name it, inside a repository.</li>
+<li>Track revision history within each repo</li>
+<li>Make different repositories for different projects</li>
+</ul>
+</section>
+<section id="terminology-1" class="level2">
+<h2 class="anchored" data-anchor-id="terminology-1">Terminology</h2>
+<ul>
+<li><strong>commit</strong>: This is the command that gives Git its power. When you commit, you are taking a “snapshot” of your repository at that point in time, giving you a checkpoint to which you can reevaluate or restore your project to any previous state.When you first start “commiting”, it is important to remember this is taking the picture, not SENDING the picture. (Sending is called “pushing”)</li>
+<li>we use commits to track the sequential changes we are making on our local version and then PUSH them back to remote repo</li>
+</ul>
+</section>
+<section id="terminology-cont." class="level2">
+<h2 class="anchored" data-anchor-id="terminology-cont.">Terminology cont.</h2>
+<ul>
+<li><p><strong>push</strong>: This is how you upload your file to GitHub. Remember, you need to both commit and push for your file to be sent to GitHub.</p></li>
+<li><p><strong>pull</strong>: This is how you bring edits from GitHub to your computer. If I make changes to your code, pulling will integrate them. You will need to do this every time you open your project.</p></li>
+<li><p><strong>branch</strong>: How do multiple people work on a project at the same time without Git getting them confused? Usually, they “branch off” of the main project with their own versions full of changes they themselves have made. After they’re done, it’s time to “merge” that branch back with the “master,” the main directory of the project. Don’t worry too much about this now.</p></li>
+</ul>
+</section>
+<section id="github-workflow" class="level2">
+<h2 class="anchored" data-anchor-id="github-workflow">GitHub workflow</h2>
+<ul>
+<li><strong>Pull</strong> latest updates from cloud to computer</li>
+<li>Edit scripts, graphs, other files</li>
+<li>Review changes and <strong>commit</strong> them</li>
+<li><strong>Push</strong> commits to the (cloud) repository</li>
+</ul>
+</section>
+<section id="class-pledge" class="level2">
+<h2 class="anchored" data-anchor-id="class-pledge">Class pledge</h2>
+<p>I solemnly swear that every time I open my repository I will <strong>(1) Pull, (2) make changes I want to make, (3) Commit, (4) Push</strong>.</p>
+<p>I swear I will never make a change to my repository without committing and pushing.</p>
+</section>
+<section id="sending-your-files-to-our-workshop-repository" class="level2">
+<h2 class="anchored" data-anchor-id="sending-your-files-to-our-workshop-repository">Sending your files to our workshop repository</h2>
+<ul>
+<li>We have an “organization” account for our workshop</li>
+<li>Can make repos public or private</li>
+<li>Why should we want things open-source? Why not?</li>
+</ul>
+</section>
+<section id="fair-data-practices" class="level2">
+<h2 class="anchored" data-anchor-id="fair-data-practices">FAIR Data Practices</h2>
+<p>Data obtained with support from public funds (such as NSF or NIH) are usually required to be made available to other scientists and the public.</p>
+<p>In particular we want our data to be FAIR:</p>
+<ul>
+<li><strong>F</strong>indable</li>
+<li><strong>A</strong>ccessible</li>
+<li><strong>I</strong>nteroperable</li>
+<li><strong>R</strong>eproducible</li>
+</ul>
+</section>
+<section id="pre-course-homework" class="level1">
+<h1>Pre-course homework</h1>
+<section id="register-for-a-github-username" class="level2">
+<h2 class="anchored" data-anchor-id="register-for-a-github-username">Register for a GitHub username</h2>
+<ul>
+<li><a href="https://github.com/" class="uri">https://github.com/</a></li>
+<li>click on either of the big green sign up buttons</li>
+</ul>
+</section>
+<section id="installing-git" class="level2">
+<h2 class="anchored" data-anchor-id="installing-git">Installing Git</h2>
+<ul>
+<li>Hopefully you have installed Git!</li>
+<li>If not, please do so here, following the instructions: <a href="http://happygitwithr.com/install-git.html#install-git" class="uri">http://happygitwithr.com/install-git.html#install-git</a></li>
+<li>Try to install git in the most scientific way possible - if one way doesn’t work, try the next, and google your mistakes!</li>
+</ul>
+</section>
+<section id="install-a-git-client" class="level2">
+<h2 class="anchored" data-anchor-id="install-a-git-client">Install a Git client</h2>
+<ul>
+<li>GitHub desktop is great for beginners</li>
+<li><a href="https://desktop.github.com" class="uri">https://desktop.github.com</a></li>
+</ul>
+</section>
+<section id="enter-your-user-name-into-this-form" class="level2">
+<h2 class="anchored" data-anchor-id="enter-your-user-name-into-this-form">Enter your user name into this form</h2>
+<ul>
+<li>enter your github user name <a href="https://forms.gle/bEoWYsnbFefjcEgS7">here</a></li>
+<li>clickable link for Kate: https://docs.google.com/forms/d/1hfFzC5CFDJAO-OVXBCEcVQk9IJ465nnEf9DA1PbVZWI/edit</li>
+</ul>
+</section>
+<section id="tasks-for-today" class="level2">
+<h2 class="anchored" data-anchor-id="tasks-for-today">Tasks for today</h2>
+<ul>
+<li>Configure Git on your computer</li>
+<li>Create a personal access token</li>
+<li>Set up a repository on GitHub</li>
+<li>Clone that repository to your computer</li>
+<li>Edit something in your repository</li>
+<li>Commit your edits using Git</li>
+<li>Push your edits to GitHub</li>
+</ul>
+</section>
+<section id="configure-git-on-your-computer" class="level2">
+<h2 class="anchored" data-anchor-id="configure-git-on-your-computer">1. Configure Git on your computer</h2>
+<ul>
+<li>Open RStudio &amp; click File–&gt;New File –&gt; RScript</li>
+<li>Type the following:</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">## install if needed (only do this once)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="do">## install.packages("usethis")</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(usethis)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">use_git_config</span>(<span class="at">user.name =</span> <span class="st">"Jane Doe"</span>, <span class="st">"user.email = jane@vt.edu"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Make sure you use the user name and email you used to sign up for github!</li>
+</ul>
+</section>
+<section id="create-a-personal-access-token" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-personal-access-token">2. Create a personal access token</h2>
+<ul>
+<li>when we interact with Git, we need to tell it that we are a specific user that is allowed to make changes to the folder</li>
+<li>We have to create a token that we store on our computers to allow us access to connect to GitHub</li>
+<li>open this <a href="https://github.com/EEIDWorkshop2026/materials/blob/main/Sat_AM/github/git_token_help.R">link</a></li>
+<li>copy and paste code and follow directions</li>
+</ul>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#abbreviated here:</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>usethis<span class="sc">::</span><span class="fu">create_github_token</span>()</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">#Look over the scopes; I highly recommend selecting </span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">#“repo”, “user”, and “workflow”. </span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">#Click “Generate token”.</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"gitcreds"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gitcreds)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">gitcreds_set</span>()</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="co">#paste your personal access token</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="fu">gitcreds_get</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="set-up-a-repository-on-github" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-a-repository-on-github">3. Set up a repository on GitHub</h2>
+<ul>
+<li>navigate to https://github.com/EEIDWorkshop2026</li>
+<li>click the green New button to create a repository
+<ul>
+<li>you can also do this on your own account, but if you make them here, I can help</li>
+<li>If I haven’t sent your Github user name, you won’t be able to access this</li>
+</ul></li>
+<li>type the name of your repository (I recommend lastname_project)</li>
+<li>choose ‘Public’ for now</li>
+<li>check the box to add a a README file</li>
+<li>click ‘Create Repository’</li>
+</ul>
+</section>
+<section id="clone-that-repository-to-your-computer" class="level2">
+<h2 class="anchored" data-anchor-id="clone-that-repository-to-your-computer">4. Clone that repository to your computer</h2>
+<ul>
+<li>In RStudio, click File–&gt;New Project–&gt;Version Control–&gt;Git</li>
+<li>In Repository Name: Copy and paste the hyperlink from the browser of your repository
+<ul>
+<li>It will have a name like this: https://github.com/EEIDWorkshop2026/yourname</li>
+</ul></li>
+<li>In Project Directory: It should have the same name as the repo on GitHub (should autofill). It should be the name after the last /</li>
+<li>Create Project as subdirectory: Pick a smart place on your computer that you find without using a search function</li>
+<li>Click OK and you should clone into a new window that says ‘YourRepo - main’</li>
+</ul>
+</section>
+<section id="cont.-exploring-your-repository" class="level2">
+<h2 class="anchored" data-anchor-id="cont.-exploring-your-repository">4 cont. Exploring your Repository</h2>
+<ul>
+<li>this repository is the same as your GitHub repo that ‘lives’ on your local computer</li>
+<li>on the bottom right - Files tab, you should see your README and a file labeled REPO.Rproj</li>
+<li>this is a shortcut to your working directory and is how you can easily access and shortcut scripts using relative paths</li>
+<li>unlike Dropbox or google drive, GitHub doesn’t automatically detect changes to your local folder. You need to tell it you are making a change using <code>commit</code>, and then send those changes using <code>push</code>.</li>
+</ul>
+</section>
+<section id="edit-something-in-your-repository" class="level2">
+<h2 class="anchored" data-anchor-id="edit-something-in-your-repository">5. Edit something in your repository</h2>
+<ul>
+<li>Close the RStudio window and find the place where you stored the your GitHub repo</li>
+<li>add something to that folder (a script, an excel file) by copying and pasting</li>
+<li>double click the file that ends in the extension .Rproj to open your Git linked project</li>
+<li>Using the files tab, open the README file and type something there. This is the file that tells other users what is inside your project and what it does, but for now, you can add any text you want. Save the file when you are done (don’t change the name)</li>
+</ul>
+</section>
+<section id="commit-push-your-edits-using-git" class="level2">
+<h2 class="anchored" data-anchor-id="commit-push-your-edits-using-git">6. Commit &amp; Push your edits using Git</h2>
+<ul>
+<li>at the top of your RStudio screen there is a sideways GIT button (it is gray, red, and green) next to AddIns</li>
+<li>click the dropdown and select ‘Commit’</li>
+<li>on the left side, you’ll see items with changes. It should be your README and the files you added.</li>
+<li>check the boxes to stage the files and the Status should change to an M</li>
+<li>in the box on the right, type a commit message (this is mandatory)</li>
+<li>your message likely includes a very short description of what you did ‘added file, README’</li>
+<li>press commit</li>
+<li>make sure you don’t get any errors</li>
+<li>press the ‘Push’ button</li>
+</ul>
+</section>
+<section id="confirm-that-push-worked" class="level2">
+<h2 class="anchored" data-anchor-id="confirm-that-push-worked">7. Confirm that Push worked</h2>
+<ul>
+<li>go to your Github repo online (e.g.&nbsp;<a href="https://github.com/EEIDWorkshop2026/yourname" class="uri">https://github.com/EEIDWorkshop2026/yourname</a>)</li>
+<li>ensure your files have updated to GitHub</li>
+</ul>
+</section>
+<section id="adding-collaborators" class="level2">
+<h2 class="anchored" data-anchor-id="adding-collaborators">8. Adding collaborators</h2>
+<ul>
+<li>henceforth, you will always add &amp; edit files in this manner. You should not directly modify files using the browser</li>
+<li>If you want to collaborate with others, while on your GitHub repo, you will go to settings–&gt;collaborator and teams–Add People</li>
+<li>you can then search by their user name (try adding me klangwig)</li>
+<li>can you can control what rights you give them</li>
+</ul>
+</section>
+<section id="collaborating-using-github" class="level2">
+<h2 class="anchored" data-anchor-id="collaborating-using-github">Collaborating using GitHub</h2>
+<ul>
+<li>if you have a collaborator on your project, they might make changes to something</li>
+<li>to avoid lots of merge conflicts, you should always ‘pull’ when you open your project</li>
+<li>this will make sure you are working on the most recent version</li>
+<li>if you and your collaborator are both working on the project and haven’t branched (or are merging branches), you’ll need to resolve merge issues</li>
+<li>this has to be done using the command line or the Desktop client (hence my recommendation for downloading)</li>
+</ul>
+</section>
+<section id="going-further" class="level2">
+<h2 class="anchored" data-anchor-id="going-further">Going further</h2>
+<ul>
+<li>Lots more to learn but you’ve accomplished the basics!</li>
+<li>Take a look at all the commands here: https://happygitwithr.com/git-commands.html</li>
+<li>Play around with GitHub desktop to get a feel for what it does</li>
+<li>Venture into the shell and command line as you begin to explore more powerful GitHub tools</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
