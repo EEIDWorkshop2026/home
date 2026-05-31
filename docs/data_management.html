@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.9.37">
+
+  <meta name="author" content="Kate Langwig, Virginia Tech">
+  <title>EEID 2026 Workshop – Managing data and building pipelines in R</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto-2740581606dc327e82f18f789b69d8a0.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" data-background-opacity="0.2" data-background-size="contain" class="quarto-title-block center">
+  <h1 class="title">Managing data and building pipelines in R</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Kate Langwig, Virginia Tech 
+</div>
+</div>
+</div>
+
+</section>
+<section id="link-to-todays-materials" class="slide level2">
+<h2>Link to today’s materials</h2>
+<ul>
+<li><p><a href="https://github.com/EEIDWorkshop2026/materials/tree/main/data_management">materials repo</a></p></li>
+<li><p>In R, go to file–&gt; new project –&gt; version control–&gt;git–&gt;copy and paste the directory name (materials)</p></li>
+<li><p>Make sure materials fills in as the name of the directory</p></li>
+<li><p><strong>Store in a place you can find!</strong></p></li>
+<li><p>Open the R script eeid_data_management.R so you can run it while I talk</p></li>
+</ul>
+</section>
+<section id="field-lab-or-software-program-to-r" class="slide level2">
+<h2>Field, lab, or software program to R</h2>
+<p>The first section will focus on best practices for organizing data <strong>from the field, lab, or elsewhere</strong> that will make the transition to wrangling it in R easiest.</p>
+</section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning objectives</h2>
+<h3 class="smaller" id="improve-data-management-through">Improve data management through:</h3>
+<ul>
+<li>Building pipelines</li>
+<li>File management</li>
+<li>Maintaining relational structure between data types</li>
+<li>Meta-data tracking</li>
+<li>Datasheet format</li>
+<li>Data management in R using the tidyverse</li>
+</ul>
+</section>
+<section id="why-pipelines" class="slide level2">
+<h2>Why pipelines?</h2>
+<p>Pipelines are ways of carefully recording and systematizing the steps you take to work with your data</p>
+<h3 class="smaller" id="ideally-your-project-will-depend-on">Ideally your project will depend on:</h3>
+<ul>
+<li>Some data files: spreadsheets storing data (.csv files from Excel)</li>
+<li>Some scripts (more on this later)</li>
+<li>Something that tells you how these things go together: README file</li>
+<li>https://github.com/DataInvestigations/bats_group_project/blob/main/README.md</li>
+</ul>
+</section>
+<section id="getting-started" class="slide level2">
+<h2>Getting started</h2>
+<h3 class="smaller" id="what-will-your-data-look-like-and-how-will-you-analyze-it">What will your data <strong>look like</strong> and how will you <strong>analyze it</strong>?</h3>
+<ul>
+<li>Determine what your data points/observations/sampling units are</li>
+<li>Use these to link across data types</li>
+<li>Stay consistent by planning ahead
+<ul>
+<li>spend a little time up front to save lots of time later</li>
+</ul></li>
+</ul>
+</section>
+<section id="always" class="slide level2">
+<h2>Always…</h2>
+<ul>
+<li>Scan datasheets to save electronically (cloud is best) and make copies. Long-term storage on acid-free paper.</li>
+<li>Retain unaltered original copies of datasheets or output files</li>
+<li>Enter data from scanned sheets where you can check or make notes as needed</li>
+<li>Develop a quality control procedure</li>
+</ul>
+<h3 class="smaller" id="consider">Consider…</h3>
+<ul>
+<li>Organizing as if you will continuously build the dataset and anticipate you will need to go back</li>
+<li>“<em>If someone continued this project, is my data pipeline in a place I could hand it over seamlessly?</em>”</li>
+</ul>
+</section>
+<section id="an-example-with-temperature-logger-data" class="slide level2">
+<h2>An example with temperature logger data</h2>
+<ul>
+<li>Multiple sites; multiple loggers; hundreds of thousands of recordings</li>
+</ul>
+<p>This can quickly become overwhelming with an abundance of folders and files; each containing many dates and readings, lots of varying information</p>
+</section>
+<section id="tips-for-organizing-bulky-data-streams" class="slide level2">
+<h2>Tips for organizing bulky data streams</h2>
+<ul>
+<li>Create a system before you deploy a single logger!
+<ul>
+<li>What will you call each logger? Will you erase data from loggers? At what intervals? Where will you store your metadata?</li>
+</ul></li>
+</ul>
+</section>
+<section id="for-example" class="slide level2">
+<h2>For example:</h2>
+<ul>
+<li>Organize by temperature logger and give each a unique name</li>
+<li>Add prefix to all temperature files with site name (bulk rename utility for PCs/select multiple and rename on Mac)</li>
+<li>Minimize transfer of files by keeping folder structure simple (don’t create unnecessary sub-folders)</li>
+<li>Create a metadata file that includes logger deployment with fields such as loggerID, site, date deployed, date retrieved, etc.</li>
+</ul>
+</section>
+<section id="metadata-and-data-dictionaries-preserving-tangential-information" class="slide level2">
+<h2><em>Metadata</em> and data dictionaries | <em>preserving tangential information</em></h2>
+<p>How do you store data that is important but not specific to a single ‘observation’?</p>
+<ul>
+<li>Trap effort, environmental conditions during sampling event, site characteristics, etc</li>
+<li>Create a separate metadata file that includes the same variables as observational data (e.g., site, date, species)</li>
+</ul>
+</section>
+<section id="metadata-and-data-dictionaries-preserving-tangential-information-1" class="slide level2">
+<h2>Metadata and <em>data dictionaries</em> | <em>preserving tangential information</em></h2>
+<p>How would someone stepping into the project understand the data you collect?</p>
+<ul>
+<li><p><strong><em>Make a data dictionary</em></strong>:</p>
+<ul>
+<li>A table of definitions in a spreadsheet (or other program)</li>
+<li>Each variable from the datasheet is described thoroughly, including precisely what it measures</li>
+<li>https://docs.google.com/spreadsheets/d/1uuWAVDz71uKa8i0SiL71CgllEZo54WAu5tYsI7YxVaw/edit?gid=0#gid=0</li>
+</ul></li>
+</ul>
+</section>
+<section id="anatomy-of-a-datasheet" class="slide level2">
+<h2>Anatomy of a datasheet</h2>
+<ul>
+<li>What should our datasheets look like?</li>
+</ul>
+
+<img data-src="datasheet1.png" width="800" class="r-stretch"></section>
+<section id="anatomy-of-a-datasheet-1" class="slide level2">
+<h2>Anatomy of a datasheet</h2>
+
+<img data-src="datasheet2.png" width="800" class="r-stretch"></section>
+<section id="anatomy-of-a-datasheet-2" class="slide level2">
+<h2>Anatomy of a datasheet</h2>
+
+<img data-src="datasheet3.png" width="800" class="r-stretch"></section>
+<section id="anatomy-of-a-datasheet-3" class="slide level2">
+<h2>Anatomy of a datasheet</h2>
+
+<img data-src="datasheet4.png" width="800" class="r-stretch"></section>
+<section id="whats-wrong-with-this-datasheet" class="slide level2">
+<h2>What’s wrong with this datasheet?</h2>
+
+<img data-src="whatswrongdatasheet.png" width="800" class="r-stretch"></section>
+<section id="data-entry-best-practices" class="slide level2">
+<h2>Data entry best practices</h2>
+<ul>
+<li>Variable names should be short but descriptive
+<ul>
+<li>We want to know what each variable is, but we also need to type variable names often when coding</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-entry-best-practices-1" class="slide level2">
+<h2>Data entry best practices</h2>
+<ul>
+<li>There should only be one piece of data per cell
+<ul>
+<li>Each variable should have its own column</li>
+<li>Each piece of information about a case should be in its own cell</li>
+<li>This will allow us to analyze data cleanly</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-entry-best-practices-2" class="slide level2">
+<h2>Data entry best practices</h2>
+<ul>
+<li>Do not encode information using formatting
+<ul>
+<li>All information should have its own column</li>
+<li>Coloring cells or bolding text can be useful when making spreadsheets but will be lost when read into an analysis software</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-entry-consistency" class="slide level2">
+<h2>Data entry consistency</h2>
+<ul>
+<li>Use consistent labels for categorical data
+<ul>
+<li>Computers will treat differences in spelling, abbreviation, or capitalization as different categories</li>
+</ul></li>
+</ul>
+</section>
+<section id="things-r-thinks-are-different-but-might-seem-the-same-to-you" class="slide level2">
+<h2>Things R thinks are different, but might seem the same to you</h2>
+<ul>
+<li>Maple</li>
+<li>maple</li>
+<li>MAPLE</li>
+<li>“Maple_”</li>
+<li>” maple”</li>
+<li>malpe</li>
+<li>mapel</li>
+</ul>
+</section>
+<section id="documentation-long-term-pipeline-success" class="slide level2">
+<h2>Documentation | <em>long-term pipeline success</em></h2>
+<h3 id="you-will-inevitably-forget-your-procedure.">You will inevitably forget your procedure.</h3>
+<ul>
+<li>Write a protocol for how your files are organized/linked together</li>
+<li>Track any modifications using your README file or other notebook.</li>
+<li><strong><em>Advantages</em></strong>:
+<ul>
+<li>Allows more flexibility and time saving if you need someone to help</li>
+<li>Reminds you how you set up your pipeline if you need to be away from the project for any time</li>
+<li>These are good practices even if the only person looking at your data is the future version of you!</li>
+</ul></li>
+</ul>
+</section>
+<section id="now-data-is-collected-entered-to-spreadsheets-and-filed-appropriately" class="slide level2">
+<h2>Now, data is collected, entered to spreadsheets, and filed appropriately!</h2>
+</section>
+<section id="read-in-your-data" class="slide level2">
+<h2>Read in your data</h2>
+<p><strong>read.csv()</strong> is the function to use when reading your spreadsheets into R.</p>
+<p>Using .csv files to store and read-in your data is important!</p>
+<ul>
+<li>Stores data in a text format (human-readable; transferrable)</li>
+<li>Can store large amounts of data in simple format</li>
+<li>Can be read by most programs</li>
+</ul>
+</section>
+<section id="naming-conventions" class="slide level2">
+<h2>Naming conventions</h2>
+<p>Additional good practices when naming things in R:</p>
+<ul>
+<li>The names of R objects also have to start with a letter, not a number.</li>
+<li>Use mostly numbers, underscores (_), and dots (.) in your names.</li>
+<li>Don’t use potentially confusing names like I or O</li>
+<li>Don’t use built-in names (like c, list, or data) for variables.</li>
+<li>Make readable variable names using camelCase, snake_case, or kebab.case</li>
+<li>Avoid variableNamesThatAreExcessivelyLong</li>
+</ul>
+</section>
+<section id="data-types" class="slide level2">
+<h2>Data types</h2>
+<p>There are several types of data that R recognizes, listed below:</p>
+<ul>
+<li><strong>Logical</strong>: True/False data</li>
+<li><strong>Numeric</strong>: All real numbers with or without decimal values</li>
+<li><strong>Integer</strong>: Real numbers without decimal values.</li>
+<li><strong>Character</strong>: String data. Thing of this as any unique string of values, such as “1dkdl;” or “Apple_Pie”. This is the default data type when R does not recognize data as being of another type.</li>
+<li><strong>Factor</strong>: Used to describe items that can have a known set of values (species, habitat, etc.).</li>
+<li><strong>Date</strong>: calendar date, e.g.&nbsp;“10-22-1994”</li>
+</ul>
+</section>
+<section id="what-type-of-data-do-we-have" class="slide level2">
+<h2>What type of data do we have?</h2>
+<p>A quick way to check what kind of data we have in our dataframe is with the <strong>str() function</strong></p>
+</section>
+<section id="dates" class="slide level2">
+<h2>Dates</h2>
+<p>Dates in R are notorious despite being common forms of data!</p>
+<ul>
+<li>Default format on Mac: mo/day/two digit year – e.g.&nbsp;01/13/18 is January 13, 2018</li>
+<li>Default format on PC: mo/day/four digit year - e.g.&nbsp;01/13/2018</li>
+</ul>
+<p>We can tell R to read our data as dates using <strong>as.Date()</strong>. <code>lubridate</code> is a helpful package for working with dates</p>
+</section>
+<section id="checking-data" class="slide level2">
+<h2>Checking Data</h2>
+<p><strong>Checking your data is very important!</strong> R can only work with the data you give it – make sure you’re giving it good data. Check for common sources of faulty data:</p>
+<ul>
+<li>Naming inconsistencies
+<ul>
+<li>Follow good naming conventions!</li>
+</ul></li>
+<li>Duplicated data
+<ul>
+<li>Are your repeating values real, or a product of a bug in your code?</li>
+</ul></li>
+<li>Data that doesn’t make sense biologically
+<ul>
+<li>A bat weighing 72 grams whereas the others weighed around 7-8 grams probably isn’t real!</li>
+</ul></li>
+</ul>
+<p><strong>Where should you correct your data?</strong></p>
+</section>
+<section id="checking-data-1" class="slide level2">
+<h2>Checking Data</h2>
+<p>Some useful tools in R to check your data for errors:</p>
+<ul>
+<li><code>head()</code> – gives you first rows of your dataframe
+<ul>
+<li>This is a good first pass</li>
+</ul></li>
+<li><code>unique()</code> – returns all of the unique values contained in a specified dataset
+<ul>
+<li>This is particularly useful when looking for naming inconsistencies</li>
+</ul></li>
+<li><code>hist()</code> – This will show you the frequency distribution of your specified data.
+<ul>
+<li>Good for identifying anomalies or outliers in your data. <strong>Interpret carefully!</strong></li>
+</ul></li>
+</ul>
+</section>
+<section id="checking-data-2" class="slide level2">
+<h2>Checking Data</h2>
+<p>Check your data frequently! You should check your data when you:</p>
+<ul>
+<li>Read in its .csv file.</li>
+<li>Change the shape of your data.</li>
+<li>Merge datasets.</li>
+<li>Do calculations and make new datasets.</li>
+</ul>
+</section>
+<section id="version-control" class="slide level2">
+<h2>Version control</h2>
+<p>Using version control (like Git) will vastly reduce the chance a serious error sneaks by.</p>
+</section>
+<section id="introducing-tidyverse" class="slide level2">
+<h2>Introducing Tidyverse</h2>
+<ul>
+<li>The tidyverse is a powerful set of separate packages</li>
+<li><a href="https://tidyverse.tidyverse.org/" class="uri">https://tidyverse.tidyverse.org/</a></li>
+<li>packages within the tidyverse include:</li>
+<li>dplyr (management &amp; manipulation)</li>
+<li>tidyr (cleaning)</li>
+<li>stringr (dealing with words inside columns)</li>
+<li><a href="https://lubridate.tidyverse.org/">lubridate</a> (dealing with dates/times)</li>
+</ul>
+</section>
+<section id="tidying-data" class="slide level2">
+<h2>Tidy(ing) data</h2>
+<p>Hadley Wickham has defined a concept of <a href="http://www.jstatsoft.org/v59/i10/paper">tidy data</a>, and has introduced the <code>tidyverse</code> package.</p>
+<ul>
+<li>Each variable is in a column</li>
+<li>Each observation is in a row</li>
+<li>“Long” rather than “wide” form</li>
+<li>Sometimes duplicates data</li>
+<li>Statistical modeling tools and graphical tools (especially the <strong>ggplot2</strong> package) in R work best with long form</li>
+</ul>
+</section>
+<section id="an-example-of-tidy-data" class="slide level2">
+<h2>An example of tidy data</h2>
+
+<img data-src="tidy_pic.png" width="800" class="r-stretch"></section>
+<section id="piping" class="slide level2">
+<h2>Piping</h2>
+<ul>
+<li>Tidyverse syntax is different from base R</li>
+<li>It relies on using <code>%&gt;%</code></li>
+<li>This is called a pipe</li>
+<li>Tt says the word “then”</li>
+</ul>
+</section>
+<section id="first-load-the-package" class="slide level2">
+<h2>First load the package</h2>
+</section>
+<section id="critical-tools-for-managing-data-in-tidyverse-smaller" class="slide level2">
+<h2>Critical tools for managing data in tidyverse {smaller}</h2>
+<ul>
+<li><code>pivot_longer</code>, <code>pivot_wider</code></li>
+<li><code>mutate</code>: add a column</li>
+<li><code>select</code>: select columns</li>
+<li><code>filter</code>: select rows</li>
+<li><code>group_by</code>: group then do something (usually mutate or summarise)</li>
+<li><code>summarise</code>: make a summary table</li>
+<li><code>arrange</code>: sort</li>
+<li><code>bind_rows</code>: combines dataframes by stacking them on top of each other - keeps all columns; will make duplicates if the columns don’t match (e.g ‘species’, ‘Species’)</li>
+</ul>
+</section>
+<section id="read-in-two-datasets" class="slide level2">
+<h2>Read in two datasets</h2>
+<ul>
+<li><p>You will need to tell R where to find them on your computer</p></li>
+<li><p>I am using an .Rproj file, which sets my working directory</p></li>
+<li><p>[Show demo]</p></li>
+</ul>
+</section>
+<section id="first-read-in-data---development-time-over-temp" class="slide level2">
+<h2>First read in data - development time over temp</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>dev <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"VByte_557_development time_X[Interactor 1 Temp].csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ul>
+<li>Data comes from Huxley 2021 Proc B</li>
+<li>Aedes aegypti traits (including development, longevity) over a range of temperatures and food regimes</li>
+</ul>
+</section>
+<section id="then-read-in-longevity-over-temp" class="slide level2">
+<h2>Then, read in longevity over temp</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>longevity <span class="ot">=</span> <span class="fu">read.csv</span>(<span class="st">"VByte_558_longevity_X[Interactor 1 Temp].csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="view-data-in-r" class="slide level2">
+<h2>View data in R</h2>
+<ul>
+<li><code>View()</code> is a helpful function to look at your data in R</li>
+<li>It opens a spreadsheet-like view of your data</li>
+</ul>
+</section>
+<section id="group-by" class="slide level2">
+<h2>Group by</h2>
+<ul>
+<li><code>group_by</code> is my favorite tidyverse command which has cut my need to write loops in half</li>
+<li><code>group_by</code> allows you to do calculations on groups of things, for example, by species or year</li>
+<li><code>group_by</code> is kind of like using Excel’s <code>filter</code></li>
+<li>For example, if I group_by <code>SecondStressorValue, Interactor1Temp</code>, this is the equivalent in Excel of selecting a food resource level (e.g.&nbsp;0.1) and a specific temp (e.g.&nbsp;22) except group_by does this for every food and temp combination in your dataset</li>
+<li>This is incredibly useful because in other programs, you might need to write a loop to have this capability</li>
+</ul>
+</section>
+<section id="group-by-temp" class="slide level2">
+<h2>Group by temp</h2>
+<div class="cell">
+<pre><code>#&gt; # A tibble: 3 × 2
+#&gt;   Interactor1Temp Mean.development.time
+#&gt;             &lt;dbl&gt;                 &lt;dbl&gt;
+#&gt; 1              22                 21.5 
+#&gt; 2              26                 18.0 
+#&gt; 3              32                  9.92</code></pre>
+</div>
+</section>
+<section id="summarise-versus-mutate" class="slide level2">
+<h2>Summarise versus Mutate</h2>
+<ul>
+<li><code>summarise</code> creates a new dataframe</li>
+<li><code>mutate</code> does a calculation where it add a new column to your existing dataframe</li>
+</ul>
+</section>
+<section id="importance-of-assigning" class="slide level2">
+<h2>Importance of assigning</h2>
+<div class="cell">
+<pre><code>#&gt; # A tibble: 3 × 2
+#&gt;   Interactor1Temp Mean.development.time
+#&gt;             &lt;dbl&gt;                 &lt;dbl&gt;
+#&gt; 1              22                 21.5 
+#&gt; 2              26                 18.0 
+#&gt; 3              32                  9.92</code></pre>
+</div>
+</section>
+<section id="assigning" class="slide level2">
+<h2>Assigning</h2>
+<ul>
+<li>When using summarise, it’s best to call your summarised object a new name (e.g.&nbsp;temp.table)</li>
+<li>This is typically not necessary when using mutate which just adds a column to an existing dataset</li>
+</ul>
+</section>
+<section id="what-does-our-dataframe-look-like-now" class="slide level2">
+<h2>What does our dataframe look like now?</h2>
+<div class="cell">
+<pre><code>#&gt; # A tibble: 6 × 5
+#&gt; # Groups:   Interactor1Temp, SecondStressorValue [1]
+#&gt;   sample.size IndividualID OriginalTraitValue SecondStressorValue
+#&gt;         &lt;int&gt; &lt;chr&gt;                     &lt;dbl&gt;               &lt;dbl&gt;
+#&gt; 1          23 PHX331                       31                 0.1
+#&gt; 2          23 PHX332                       32                 0.1
+#&gt; 3          23 PHX333                       33                 0.1
+#&gt; 4          23 PHX334                       37                 0.1
+#&gt; 5          23 PHX335                       33                 0.1
+#&gt; 6          23 PHX336                       37                 0.1
+#&gt; # ℹ 1 more variable: Interactor1Temp &lt;dbl&gt;</code></pre>
+</div>
+</section>
+<section id="joining" class="slide level2">
+<h2>Joining</h2>
+<ul>
+<li>Joining datasets together is a useful skill, especially if we have two datasets we need to match on a specific column or set of columns</li>
+<li><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html" class="uri">https://dplyr.tidyverse.org/reference/mutate-joins.html</a></li>
+<li>Always call your new dataframe something new; don’t write over and old dataframe in case you make a mistake joining</li>
+</ul>
+</section>
+<section id="join-functions" class="slide level2">
+<h2>Join functions</h2>
+<ul>
+<li><code>inner_join()</code>: includes all rows in x and y.</li>
+<li>when inner joining, non-matching rows will be dropped!</li>
+<li><code>left_join()</code>: includes all rows in x.</li>
+<li>when left joining, every row in x is kept, but only those matching x are kept in y</li>
+<li><code>right_join()</code>: includes all rows in y.</li>
+<li>when right joining, every row in y is kept, but only those matching y are kept in x</li>
+<li><code>full_join()</code>: includes all rows in x or y.</li>
+<li>every row is kept in both x and y</li>
+</ul>
+</section>
+<section id="joining-actual-datasets" class="slide level2">
+<h2>Joining actual datasets</h2>
+<ul>
+<li>We frequently have data coming from different sources (lab, field, etc.)</li>
+<li>Let’s join our development time data with our longevity data</li>
+<li>We might want to do this to ask ‘How does development time influence longevity?’</li>
+<li>For this, we want both to be columns in the same dataframe linked by individual ID, food regime, and temp</li>
+</ul>
+</section>
+<section id="first-pare-down-longevity-to-just-the-columns-we-need" class="slide level2">
+<h2>First, pare down longevity to just the columns we need</h2>
+</section>
+<section id="renaming-originaltraitvalue-to-development-time-in-dev" class="slide level2">
+<h2>Renaming OriginalTraitValue to development time in dev</h2>
+</section>
+<section id="join-development-and-longevity" class="slide level2">
+<h2>Join development and longevity</h2>
+<div class="cell">
+<pre><code>#&gt; # A tibble: 6 × 5
+#&gt; # Groups:   temp, resource [1]
+#&gt;   IndividualID resource  temp development longevity
+#&gt;   &lt;chr&gt;           &lt;dbl&gt; &lt;dbl&gt;       &lt;dbl&gt;     &lt;int&gt;
+#&gt; 1 PHX331            0.1    22          31         8
+#&gt; 2 PHX332            0.1    22          32         5
+#&gt; 3 PHX333            0.1    22          33         5
+#&gt; 4 PHX334            0.1    22          37         6
+#&gt; 5 PHX335            0.1    22          33         4
+#&gt; 6 PHX336            0.1    22          37         6</code></pre>
+</div>
+</section>
+<section id="pivoting" class="slide level2">
+<h2>Pivoting</h2>
+<ul>
+<li><a href="https://tidyr.tidyverse.org/articles/pivot.html" class="uri">https://tidyr.tidyverse.org/articles/pivot.html</a></li>
+<li>sometimes our datasets are not in the format we want for an analysis</li>
+</ul>
+</section>
+<section id="going-from-wide-to-long-format" class="slide level2">
+<h2>Going from wide to long format</h2>
+<ul>
+<li>Often, we might have data in columns that needs to be in rows</li>
+<li>R works better with this long (or tidy) format</li>
+</ul>
+</section>
+<section id="check-out-new-long-data-frame" class="slide level2">
+<h2>Check out new long data frame</h2>
+<div class="cell">
+<pre><code>#&gt; # A tibble: 6 × 3
+#&gt;   IndividualID trait       trait_value
+#&gt;   &lt;chr&gt;        &lt;chr&gt;             &lt;dbl&gt;
+#&gt; 1 PHX331       development          31
+#&gt; 2 PHX331       longevity             8
+#&gt; 3 PHX332       development          32
+#&gt; 4 PHX332       longevity             5
+#&gt; 5 PHX333       development          33
+#&gt; 6 PHX333       longevity             5</code></pre>
+</div>
+</section>
+<section id="lots-of-clever-ways-to-pivot-data" class="slide level2">
+<h2>Lots of clever ways to pivot data</h2>
+<ul>
+<li>Can move wider instead of long (<code>pivot_wider()</code>)
+<ul>
+<li>Can fill 0s instead of NAs when pivoting wider (useful for generating 0s from missing lists)</li>
+</ul></li>
+<li>Can use <code>starts_with()</code> to select columns that start with the same thing (e.g.&nbsp;all species names)</li>
+<li>Can use <code>-</code> to select all columns except a few (e.g.&nbsp;all columns except site and date)</li>
+</ul>
+</section>
+<section id="in-class-work" class="slide level2">
+<h2>In class work</h2>
+<ul>
+<li>In the data folder, there is a file called ‘bat_count.csv’</li>
+<li>In this file, each row is a count of bats at site and there is a column called ‘species’ that has the species name for each bat</li>
+<li>Transform this data file from long to wide format by making a column for the count of each species. Assume that a species has a count of 0 if no count for that species is listed at a site.</li>
+<li>Extra time? Put it back in long format!</li>
+</ul>
+
+
+</section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
