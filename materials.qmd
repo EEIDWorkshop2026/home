@@ -86,5 +86,5 @@ There are many on-line tutorials. One resources with some good videos is
 -   [Project on VA modeling](VAmodeling_Intro.pdf)
 -   [Project on Heat Islands](HeatIsland_Intro.pdf)
 -   [Project on Chronic Wasting Disease](EnvironmentnalTranmission_CWDIntro.pdf)
--   [Project on Influenza](blank.qmd)
+-   [Project on Influenza](SeasonalInfluenza_Intro.pdf)
 <br>
