@@ -39,21 +39,21 @@
     "href": "materials.html#introduction-to-github-through-r",
     "title": "Materials for the EEID Workshop 2026",
     "section": "Introduction to GitHub through R",
-    "text": "Introduction to GitHub through R\n\nLecture Slides"
+    "text": "Introduction to GitHub through R\n\nDay1\n\nSlides"
   },
   {
     "objectID": "materials.html#introduction-infectious-disease-modeling",
     "href": "materials.html#introduction-infectious-disease-modeling",
     "title": "Materials for the EEID Workshop 2026",
     "section": "Introduction Infectious Disease Modeling",
-    "text": "Introduction Infectious Disease Modeling\n\nLecture Slides"
+    "text": "Introduction Infectious Disease Modeling\n\nSlides"
   },
   {
     "objectID": "materials.html#basic-data-fitting",
     "href": "materials.html#basic-data-fitting",
     "title": "Materials for the EEID Workshop 2026",
     "section": "Basic Data Fitting",
-    "text": "Basic Data Fitting\n\nLecture Slides"
+    "text": "Basic Data Fitting\n\nSlides"
   },
   {
     "objectID": "materials.html#introduction-to-spatial-modeling",
@@ -1111,5 +1111,26 @@
     "title": "Managing data and building pipelines in R",
     "section": "In class work",
     "text": "In class work\n\nIn the data folder, there is a file called ‘bat_count.csv’\nIn this file, each row is a count of bats at site and there is a column called ‘species’ that has the species name for each bat\nTransform this data file from long to wide format by making a column for the count of each species. Assume that a species has a count of 0 if no count for that species is listed at a site.\nExtra time? Put it back in long format!"
+  },
+  {
+    "objectID": "materials.html#introduction-to-data-management-through-r",
+    "href": "materials.html#introduction-to-data-management-through-r",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Introduction to Data Management through R",
+    "text": "Introduction to Data Management through R\n\nSlides"
+  },
+  {
+    "objectID": "materials.html#day-1",
+    "href": "materials.html#day-1",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Day 1",
+    "text": "Day 1\n\nIntroduction to the Workshop\n\nLecture Slides\n\n\n\nIntroduction to GitHub through R\n\nSlides\n\n\n\nIntroduction to Data Management through R\n\nSlides\n\n\n\nIntroduction Infectious Disease Modeling\n\nSlides\n\n\n\nBasic Data Fitting\n\nSlides"
+  },
+  {
+    "objectID": "materials.html#day-2",
+    "href": "materials.html#day-2",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Day 2",
+    "text": "Day 2\n\nIntroduction to Spatial Modeling\n\nLecture Slides"
   }
 ]
