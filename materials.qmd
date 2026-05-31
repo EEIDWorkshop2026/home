@@ -53,31 +53,38 @@ There are many on-line tutorials. One resources with some good videos is
 # Live Workshop Materials
 
 ## Day 1
-### Introduction to the Workshop
+***Introduction to the Workshop***
 
 -   [Slides](VB_Welcome.qmd)
 
-### Introduction to GitHub through R
+***Introduction to GitHub through R***
 
 -   [Slides](GitHub_R.html)
 
-### Introduction to Data Management through R
+***Introduction to Data Management through R***
 
 -   [Slides](data_management.html)
 
-### Introduction Infectious Disease Modeling
+***Introduction Infectious Disease Modeling***
 
 -  [Slides](EEID_Workshop_Intro_ID.pdf)
 
-### Basic Data Fitting
+***Basic Data Fitting***
 
 -   [Slides](EEID_Workshop_Intro_Data_Fitting.pdf)
 <br>
 
 ## Day 2
 
-### Introduction to Spatial Modeling
+***Introduction to Spatial Modeling***
 
 -   [Slides](spatial_models.pdf)
 <br>
 
+***Projects***
+
+-   [Project on VA modeling](VAmodeling_Intro.pdf)
+-   [Project on Heat Islands](HeatIsland_Intro.pdf)
+-   [Project on Chronic Wasting Disease](EnvironmentnalTranmission_CWDIntro.pdf)
+-   [Project on Influenza](blank.qmd)
+<br>
