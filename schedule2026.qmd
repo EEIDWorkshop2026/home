@@ -45,7 +45,7 @@ Information about pre-workshop preparation is available in the [Materials page](
 | Time   | Activity | Materials |
 |--------|----------|-----------|
 | 8:30   | Overview  of the day         |           |
-| 9:00   | Intro to Spatial Modeling | |
+| 9:00   | Intro to Spatial Modeling | [Slides](spatial_models.pdf)|
 | 10:30  | Break    |           |
 | 11:00  | Basic Spatial Modeling  |   |
 | 11:30  | Intro to Projects and Questions  |   |

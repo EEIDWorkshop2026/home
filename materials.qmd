@@ -78,6 +78,6 @@ There are many on-line tutorials. One resources with some good videos is
 
 ### Introduction to Spatial Modeling
 
--   [Lecture Slides](blank.qmd)
+-   [Slides](spatial_models.pdf)
 <br>
 
