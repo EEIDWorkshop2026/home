@@ -32,9 +32,9 @@ Information about pre-workshop preparation is available in the [Materials page](
 | 10:30  | Break    |          |
 | 10:45  | Data Management in R (*with [Vectorbyte](https://vectorbyteorg.github.io/vectorbyte-training2026/schedule2026.html)*) | [Slides](data_management.html)|
 | 12:00  | Lunch    |           |
-| 13:00  | Intro to Infectious Disease Modeling | [Slides](EEID_Workshop_Intro_ID.pdf) |
+| 13:00  | Intro to Infectious Disease Modeling |  [Slides](EEID_Workshop_Intro_ID.pdf) |
 | 15:00  | Break    |           |
-| 15:30  | Basics of Data Fitting |    |
+| 15:30  | Basics of Data Fitting | [Slides](EEID_Workshop_Intro_Data_Fitting.pdf)    |
 | 17:00  | Adjourn |    |
 
 
