@@ -44,15 +44,15 @@ Information about pre-workshop preparation is available in the [Materials page](
 
 | Time   | Activity | Materials |
 |--------|----------|-----------|
-| 8:30   | Overview  of the day         |           |
+| 8:30   | Overview  of the day | |
 | 9:00   | Intro to Spatial Modeling | [Slides](spatial_models.pdf)|
-| 10:30  | Break    |           |
+| 10:30  | Break    | |
 | 11:00  | Intro to Projects and Questions  | See [Materials page](materials.html#projects)  |
-| 12:00  | Lunch    |           |
-| 13:00  | Tutorial on Projects and Begin Project Work |  |
-| 14:30  | Break    |           |
-| 15:00  | Project Time   |   |
-| 17:00  | Adjourn |    |
+| 12:00  | Lunch    | |
+| 13:00  | Tutorial on Projects and Begin Project Work | |
+| 14:30  | Break    | |
+| 15:00  | Project Time | See [Materials page](materials.html#projects) |
+| 17:00  | Adjourn | |
 <br>
 <br>
 <br>
@@ -61,9 +61,9 @@ Information about pre-workshop preparation is available in the [Materials page](
 
 | Time.  | Activity                       | Materials |
 |--------|--------------------------------|-----------|
-| 8:30   | Overview  of the day         | |
-| 9:00   | Project Time  | |
-| 10:30  | Break                 | |
+| 8:30   | Overview  of the day | |
+| 9:00   | Project Time  | See [Materials page](materials.html#projects) |
+| 10:30  | Break | |
 | 11:00  | Present Projects (*with [Vectorbyte](https://vectorbyteorg.github.io/vectorbyte-training2026/schedule2026.html)*) | |
 | 12:00  | Lunch     | |
 

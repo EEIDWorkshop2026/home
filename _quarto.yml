@@ -16,7 +16,7 @@ website:
         text: Materials
     right:
       - icon: github
-        href: https://github.com/EEIDWorkshop2026/home
+        href: https://github.com/EEIDWorkshop2026/materials
     search: TRUE
         
 format:

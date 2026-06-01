@@ -81,10 +81,25 @@ There are many on-line tutorials. One resources with some good videos is
 -   [Slides](spatial_models.pdf)
 <br>
 
-***Projects***
+## Projects
 
--   [Project on VA modeling](VAmodeling_Intro.pdf)
--   [Project on Heat Islands](HeatIsland_Intro.pdf)
--   [Project on Chronic Wasting Disease](EnvironmentnalTranmission_CWDIntro.pdf)
--   [Project on Influenza](SeasonalInfluenza_Intro.pdf)
-<br>
+***VA Movement Modeling*** 
+
+-   [Intro Slides](VAmodeling_Intro.pdf)
+-   [Project Info](https://github.com/EEIDWorkshop2026/materials/tree/main/projects/Ruktanonchai_Human_Movement)
+
+***Heat Islands***
+
+-   [Intro Slides](HeatIsland_Intro.pdf)
+-   [Project Info](https://github.com/EEIDWorkshop2026/materials/tree/main/projects/Robert_Heat_Islands)
+
+
+***Chronic Wasting Disease***
+
+-   [Intro Slides](EnvironmentnalTranmission_CWDIntro.pdf)
+-   [Project Info](https://github.com/EEIDWorkshop2026/materials/tree/main/projects/Peace_Environmental_Transmission)
+
+***Seasonal Influenza***
+
+-   [Intro Slides](SeasonalInfluenza_Intro.pdf)
+-   [Project Info](https://github.com/EEIDWorkshop2026/materials/tree/main/projects/Saucedo_Case_Study_Seasonal_Influenza)

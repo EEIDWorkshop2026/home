@@ -67,7 +67,7 @@
     "href": "schedule2026.html",
     "title": "Schedule for the EEID 2026 Workshop",
     "section": "",
-    "text": "Pre-workshop\nInformation about pre-workshop preparation is available in the Materials page.\n \n\n\n29 May 2026 (arrive)\n\n\n\nTime\nActivity\n\n\n\n\nAt leisure\nArrival\n\n\n\n  \n\n\n30 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview and Introduction (with Vectorbyte)\nSlides\n\n\n9:00\nIntro to GitHub through R (with Vectorbyte)\nSlides\n\n\n10:30\nBreak\n\n\n\n10:45\nData Management in R (with Vectorbyte)\nSlides\n\n\n12:00\nLunch\n\n\n\n13:00\nIntro to Infectious Disease Modeling\nSlides\n\n\n15:00\nBreak\n\n\n\n15:30\nBasics of Data Fitting\nSlides\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n31 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nIntro to Spatial Modeling\nSlides\n\n\n10:30\nBreak\n\n\n\n11:00\nIntro to Projects and Questions\nSee Materials page\n\n\n12:00\nLunch\n\n\n\n13:00\nTutorial on Projects and Begin Project Work\n\n\n\n14:30\nBreak\n\n\n\n15:00\nProject Time\n\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n1 June 2026 (08:30 - 12:00)\n\n\n\nTime.\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nProject Time\n\n\n\n10:30\nBreak\n\n\n\n11:00\nPresent Projects (with Vectorbyte)\n\n\n\n12:00\nLunch\n\n\n\n\n  \n\n\nPost-workshop\nEnjoy using these new techniques!"
+    "text": "Pre-workshop\nInformation about pre-workshop preparation is available in the Materials page.\n \n\n\n29 May 2026 (arrive)\n\n\n\nTime\nActivity\n\n\n\n\nAt leisure\nArrival\n\n\n\n  \n\n\n30 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview and Introduction (with Vectorbyte)\nSlides\n\n\n9:00\nIntro to GitHub through R (with Vectorbyte)\nSlides\n\n\n10:30\nBreak\n\n\n\n10:45\nData Management in R (with Vectorbyte)\nSlides\n\n\n12:00\nLunch\n\n\n\n13:00\nIntro to Infectious Disease Modeling\nSlides\n\n\n15:00\nBreak\n\n\n\n15:30\nBasics of Data Fitting\nSlides\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n31 May 2026 (08:30 - 17:00)\n\n\n\nTime\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nIntro to Spatial Modeling\nSlides\n\n\n10:30\nBreak\n\n\n\n11:00\nIntro to Projects and Questions\nSee Materials page\n\n\n12:00\nLunch\n\n\n\n13:00\nTutorial on Projects and Begin Project Work\n\n\n\n14:30\nBreak\n\n\n\n15:00\nProject Time\nSee Materials page\n\n\n17:00\nAdjourn\n\n\n\n\n  \n\n\n1 June 2026 (08:30 - 12:00)\n\n\n\nTime.\nActivity\nMaterials\n\n\n\n\n8:30\nOverview of the day\n\n\n\n9:00\nProject Time\nSee Materials page\n\n\n10:30\nBreak\n\n\n\n11:00\nPresent Projects (with Vectorbyte)\n\n\n\n12:00\nLunch\n\n\n\n\n  \n\n\nPost-workshop\nEnjoy using these new techniques!"
   },
   {
     "objectID": "about.html",
@@ -1131,7 +1131,7 @@
     "href": "materials.html#day-2",
     "title": "Materials for the EEID Workshop 2026",
     "section": "Day 2",
-    "text": "Day 2\nIntroduction to Spatial Modeling\n\nSlides \n\nProjects\n\nProject on VA modeling\nProject on Heat Islands\nProject on Chronic Wasting Disease\nProject on Influenza"
+    "text": "Day 2\nIntroduction to Spatial Modeling\n\nSlides"
   },
   {
     "objectID": "VB_Welcome.html#welcome",
@@ -1195,5 +1195,12 @@
     "title": "VectorByte and EEID Methods Training",
     "section": "Questions?",
     "text": "Questions?"
+  },
+  {
+    "objectID": "materials.html#projects",
+    "href": "materials.html#projects",
+    "title": "Materials for the EEID Workshop 2026",
+    "section": "Projects",
+    "text": "Projects\nVA Movement Modeling\n\nIntro Slides\nProject Info\n\nHeat Islands\n\nIntro Slides\nProject Info\n\nChronic Wasting Disease\n\nIntro Slides\nProject Info\n\nSeasonal Influenza\n\nIntro Slides\nProject Info"
   }
 ]
