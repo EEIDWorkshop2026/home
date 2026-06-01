@@ -68,10 +68,12 @@ There are many on-line tutorials. One resources with some good videos is
 ***Introduction Infectious Disease Modeling***
 
 -  [Slides](EEID_Workshop_Intro_ID.pdf)
+-  [Code](https://github.com/EEIDWorkshop2026/materials/tree/main/Sat_PM)
 
 ***Basic Data Fitting***
 
 -   [Slides](EEID_Workshop_Intro_Data_Fitting.pdf)
+-   [Code](https://github.com/EEIDWorkshop2026/materials/tree/main/Sat_PM)
 <br>
 
 ## Day 2

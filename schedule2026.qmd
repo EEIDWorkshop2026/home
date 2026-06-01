@@ -49,7 +49,7 @@ Information about pre-workshop preparation is available in the [Materials page](
 | 10:30  | Break    | |
 | 11:00  | Intro to Projects and Questions  | See [Materials page](materials.html#projects)  |
 | 12:00  | Lunch    | |
-| 13:00  | Tutorial on Projects and Begin Project Work | |
+| 13:00  | Begin Project Work | See [Materials page](materials.html#projects) |
 | 14:30  | Break    | |
 | 15:00  | Project Time | See [Materials page](materials.html#projects) |
 | 17:00  | Adjourn | |
